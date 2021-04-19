@@ -1,5 +1,21 @@
 .image-card {
-  height: 491px;
+  background-image: url(../../content/assets/images/header-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+  height: 100vh;
+  &:after {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #1d4f9e;
+    opacity: 0.5;
+    position: absolute;
+  }
   .image {
     height: 491px;
   }
@@ -7,8 +23,9 @@
     padding: 0;
   }
   .intro-text {
-    padding-top: 150px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 90px;
     .intro-lead-in {
       font-size: 22px;
       font-style: italic;
@@ -23,17 +40,21 @@
       margin-bottom: 25px;
       @include heading-font;
     }
+    button {
+      background-color: #4cafbe;
+      border: 1px solid #1d4f9e;
+      color: #000;
+      &:hover {
+        background-color: #1d4f9e !important;
+        border: 1px solid #4cafbe !important;
+        color: #fff;
+      }
+    }
   }
 }
 @media (min-width: 768px) {
   .image-card {
-    height: 759px;
-    .image {
-      height: 759px;
-    }
     .intro-text {
-      padding-top: 300px;
-      padding-bottom: 200px;
       .intro-lead-in {
         font-size: 40px;
         font-style: italic;

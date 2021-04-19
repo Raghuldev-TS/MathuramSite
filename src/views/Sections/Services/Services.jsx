@@ -15,7 +15,7 @@ const Services = ({ className, frontmatter }) => {
   const { anchor, header: rootHeader, subheader: rootSubHeader, services } = frontmatter;
 
   return (
-    <PageSection className={className} id={anchor}>
+    <PageSection className={`${className} d-none`}>
       <Row>
         <SectionHeader header={rootHeader} subheader={rootSubHeader} />
       </Row>
